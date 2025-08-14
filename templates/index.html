@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate Collaborative Mode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body style="background-color: #1a1a1a; color: #e0e0e0;">
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center bg-gradient">
+        <div class="row w-100">
+            <div class="col-md-6 offset-md-3">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-users fa-3x mb-3" style="color: #007bff;"></i>
+                            <h1 class="h3 mb-3 fw-bold" style="color: #ffffff;">StudyMate Collaborative Mode</h1>
+                            <p class="text-muted">Study together with friends in real-time</p>
+                        </div>
+
+                        <!-- Create Room Section -->
+                        <div class="mb-4">
+                            <h5 class="mb-3" style="color: #ffffff;"><i class="fas fa-plus-circle me-2" style="color: #28a745;"></i>Create New Study Room</h5>
+                            <form id="createRoomForm">
+                                <div class="mb-3">
+                                    <label for="createUsername" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="createUsername" placeholder="Enter your name" required>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">
+                                    <i class="fas fa-plus me-2"></i>Create Room
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="text-center my-4">
+                            <span class="text-muted">OR</span>
+                        </div>
+
+                        <!-- Join Room Section -->
+                        <div class="mb-4">
+                            <h5 class="mb-3" style="color: #ffffff;"><i class="fas fa-sign-in-alt me-2" style="color: #007bff;"></i>Join Existing Room</h5>
+                            <form id="joinRoomForm">
+                                <div class="mb-3">
+                                    <label for="joinUsername" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="joinUsername" placeholder="Enter your name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="roomCode" class="form-label">Room Code</label>
+                                    <input type="text" class="form-control text-uppercase" id="roomCode" placeholder="Enter room code" required maxlength="8">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Join Room
+                                </button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Room Created Successfully!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-check-circle fa-3x mb-3" style="color: #28a745;"></i>
+                        <h5 style="color: #ffffff;">Your room code is:</h5>
+                        <h2 class="fw-bold" id="roomCodeDisplay" style="color: #ffffff;"></h2>
+                        <p class="text-muted">Share this code with your friends to join the study session</p>
+                        <button class="btn btn-outline-secondary" onclick="copyRoomCode()">
+                            <i class="fas fa-copy me-2"></i>Copy Code
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="enterRoomBtn">
+                        <i class="fas fa-arrow-right me-2"></i>Enter Room
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Alert -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1050">
+        <div id="errorAlert" class="alert alert-danger alert-dismissible fade" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            <span id="errorMessage"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

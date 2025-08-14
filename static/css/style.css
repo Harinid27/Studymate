@@ -1,0 +1,282 @@
+/* Modern Dark Theme - Main Application */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+.bg-gradient {
+    background: #1a1a1a !important;
+    min-height: 100vh;
+}
+
+.card {
+    background: #262626 !important;
+    border: 1px solid #404040 !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+.form-control {
+    background-color: #404040 !important;
+    border: 1px solid #555 !important;
+    color: #e0e0e0 !important;
+}
+
+.form-control:focus {
+    background-color: #4a4a4a !important;
+    border-color: #666 !important;
+    box-shadow: 0 0 0 0.2rem rgba(102, 102, 102, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.form-control::placeholder {
+    color: #999 !important;
+}
+
+.btn-success {
+    background: #28a745 !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.btn-success:hover {
+    background: #218838 !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+.btn-primary {
+    background: #007bff !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background: #0056b3 !important;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+/* Text and Labels */
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-muted {
+    color: #b0b0b0 !important;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.form-label {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
+/* Feature icons animation */
+.col-6:hover i, .col-md-3:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Alert animations and styling */
+.alert {
+    animation: slideInRight 0.3s ease-out;
+    background-color: #2d2d2d !important;
+    border: 1px solid #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+.alert-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+}
+
+.alert-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #ffffff !important;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Modal enhancements */
+.modal-content {
+    background-color: #262626 !important;
+    border: 1px solid #404040 !important;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    color: #e0e0e0 !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid #404040 !important;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #2d2d2d !important;
+}
+
+.modal-title {
+    color: #ffffff !important;
+}
+
+.modal-body {
+    background-color: #262626 !important;
+}
+
+.modal-footer {
+    border-top: 1px solid #404040 !important;
+    background-color: #2d2d2d !important;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input styling */
+.form-control {
+    border-radius: 0.5rem;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Button Styling */
+.btn-outline-secondary {
+    border-color: #666 !important;
+    color: #e0e0e0 !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #666 !important;
+    border-color: #666 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-light {
+    border-color: #e0e0e0 !important;
+    color: #e0e0e0 !important;
+}
+
+.btn-outline-light:hover {
+    background-color: #e0e0e0 !important;
+    border-color: #e0e0e0 !important;
+    color: #1a1a1a !important;
+}
+
+.btn-outline-danger {
+    border-color: #dc3545 !important;
+    color: #dc3545 !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 2rem !important;
+    }
+
+    .col-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Success modal styling */
+#roomCodeDisplay {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    padding: 1rem;
+    background: #404040 !important;
+    color: #ffffff !important;
+    border-radius: 0.5rem;
+    border: 2px dashed #666 !important;
+}
+
+/* Form validation styling */
+.form-control.is-valid {
+    border-color: #28a745 !important;
+    background-color: #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545 !important;
+    background-color: #404040 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Icon styling */
+.fas, .far {
+    color: inherit;
+}
+
+.text-primary .fas {
+    color: #007bff !important;
+}
+
+.text-success .fas {
+    color: #28a745 !important;
+}
